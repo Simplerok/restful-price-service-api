@@ -18,7 +18,7 @@ In this one is used such technologies as:
 
 1. Clone the application
 ```console
-git clone https://git-students.senla.eu/senla_java_nn/bogdan_ryazhin.git
+git clone https://github.com/Simplerok/restfull-price-service-api.git
 ```
 
 2. Crete a build for application
