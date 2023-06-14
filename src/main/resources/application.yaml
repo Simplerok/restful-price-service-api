@@ -1,0 +1,28 @@
+spring:
+#  profiles:
+#    active: dev
+  liquibase:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/price_service
+    username: admin
+    password: admin
+
+server:
+  error:
+    include-message: always
+
+security:
+  jwt:
+    secret: amhhc2ZramhKREhBSERLNjY1NTVmZEpIRkFIRkdqdTU1Xl5kaGRmaGd0cjRnNXJnNGI2
+    access: 3600000
+    refresh: 2592000000

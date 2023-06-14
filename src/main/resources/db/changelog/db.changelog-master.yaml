@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/scripts/V1__InitDB.sql
+  - include:
+      file: db/changelog/scripts/V2__Insert_Roles.sql
+  - include:
+      file: db/changelog/scripts/V3__Insert_Shops_Brands_Categ.sql
+  - include:
+      file: db/changelog/scripts/V4__Insert_Users.sql
+  - include:
+      file: db/changelog/scripts/V5__Add_Roles_toUsers.sql
+  - include:
+      file: db/changelog/scripts/V6__Insert_Products.sql
+  - include:
+      file: db/changelog/scripts/V7__Insert_Prices.sql

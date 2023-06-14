@@ -1,0 +1,36 @@
+spring:
+#  profiles:
+#    active: test
+  liquibase:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:14.7-alpine:///spring_boot_testcontainers
+    username: admin
+    password: admin
+  test:
+    database:
+      replace: none
+logging:
+  level:
+    root: info
+    com.senla.nn.priceservapi: debug
+
+server:
+  error:
+    include-message: always
+
+security:
+  ignored: true
+  jwt:
+    secret: amhhc2ZramhKREhBSERLNjY1NTVmZEpIRkFIRkdqdTU1Xl5kaGRmaGd0cjRnNXJnNGI2
+    access: 3600000
+    refresh: 2592000000
